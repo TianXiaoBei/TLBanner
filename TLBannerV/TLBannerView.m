@@ -144,6 +144,15 @@ static  CGFloat criticalValue = .2f;
     return _scrollTimer;
 }
 
+#pragma mark - 设置banner的类型: 轮播 和 相册浏览
+- (void)setBannerType:(TLBannerType)bannerType{
+    _bannerType = bannerType;
+    if(bannerType == TLBannerTypeBrowser){
+        [self destroyTimer];
+    }
+    self.scrollView.bannerType = bannerType;
+}
+
 #pragma mark - setImages / setScrollDuration / setPrivateDuration
 -(void)setImages:(NSArray *)images{
     _images = images;
@@ -324,9 +333,16 @@ static  CGFloat criticalValue = .2f;
             NSInteger leftIndex = (curIndex + imageCount - 1) % imageCount;
             NSInteger rightIndex= (curIndex + 1) % imageCount;
             
-            self.scrollView.leftV.image = [UIImage imageNamed:self.images[leftIndex]];
-            self.scrollView.midV.image = [UIImage imageNamed:self.images[curIndex]];
-            self.scrollView.rightV.image = [UIImage imageNamed:self.images[rightIndex]];
+            UIImage *leftImg = [UIImage imageNamed:self.images[leftIndex]];
+            self.scrollView.leftV.image = leftImg;
+            
+            UIImage *midImg = [UIImage imageNamed:self.images[curIndex]];
+            self.scrollView.midV.image = midImg;
+            
+            UIImage *rightImg = [UIImage imageNamed:self.images[rightIndex]];
+            self.scrollView.rightV.image = rightImg;
+            
+            NSLog(@"\nleftSize = %@ \nmidSize = %@ \nrightSize = %@",NSStringFromCGSize(leftImg.size),NSStringFromCGSize(midImg.size),NSStringFromCGSize(rightImg.size));
         }
     }
     else{
@@ -336,9 +352,17 @@ static  CGFloat criticalValue = .2f;
                 NSInteger leftIndex = (curIndex + imageCount - 1) % imageCount;
                 NSInteger rightIndex= (curIndex + 1) % imageCount;
                 
-                self.scrollView.leftV.image = [UIImage imageNamed:self.privateImages[leftIndex]];
-                self.scrollView.midV.image = [UIImage imageNamed:self.privateImages[curIndex]];
-                self.scrollView.rightV.image = [UIImage imageNamed:self.privateImages[rightIndex]];
+                UIImage *leftImg = [UIImage imageNamed:self.privateImages[leftIndex]];
+                self.scrollView.leftV.image = leftImg;
+                
+                UIImage *midImg = [UIImage imageNamed:self.privateImages[curIndex]];
+                self.scrollView.midV.image = midImg;
+                
+                UIImage *rightImg = [UIImage imageNamed:self.privateImages[rightIndex]];
+                self.scrollView.rightV.image = rightImg;
+                
+                NSLog(@"\nleftSize = %@ \nmidSize = %@ \nrightSize = %@",NSStringFromCGSize(leftImg.size),NSStringFromCGSize(midImg.size),NSStringFromCGSize(rightImg.size));
+
             }
         }
     }
@@ -399,9 +423,10 @@ static  CGFloat criticalValue = .2f;
 
 /** 开启定时器 */
 -(void)startTimer{
-    
-    if (self.scrollTimer != nil && self.autoPlay) {
-        [self.scrollTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:self.privateDuration > 0 ? self.privateDuration : self.scrollDuration]];
+    if(self.bannerType == TLBannerTypeCarousel){
+        if (self.scrollTimer != nil && self.autoPlay) {
+            [self.scrollTimer setFireDate:[NSDate dateWithTimeIntervalSinceNow:self.privateDuration > 0 ? self.privateDuration : self.scrollDuration]];
+        }
     }
 }
 
@@ -446,14 +471,15 @@ static  CGFloat criticalValue = .2f;
 @end
 
 
-#pragma mark - TLScrollView - @implementation
+#pragma mark - TLScrollView
 @implementation TLScrollView
-//固定的3个imageView实现无线轮播
+
 static CGFloat FixedViewCount = 3;
 
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         
+        //左边的
         UIImageView *leftV = [[UIImageView alloc] init];
         self.leftV = leftV;
         self.leftV.userInteractionEnabled = YES;
@@ -462,7 +488,7 @@ static CGFloat FixedViewCount = 3;
         UITapGestureRecognizer *tapLeft = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
         [self.leftV addGestureRecognizer:tapLeft];
         
-        
+        //中间的
         UIImageView *midV = [[UIImageView alloc] init];
         self.midV = midV;
         self.midV.userInteractionEnabled = YES;
@@ -471,7 +497,7 @@ static CGFloat FixedViewCount = 3;
         UITapGestureRecognizer *tapMid = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage:)];
         [self.midV addGestureRecognizer:tapMid];
         
-        
+        //右边的
         UIImageView *rightV = [[UIImageView alloc] init];
         self.rightV = rightV;
         self.rightV.userInteractionEnabled = YES;
@@ -486,27 +512,47 @@ static CGFloat FixedViewCount = 3;
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
     if(self = [super initWithCoder:aDecoder]){
-        UIImageView *leftV = [[UIImageView alloc] init];
-        self.leftV = leftV;
-        [self addSubview:leftV];
-        
-        UIImageView *midV = [[UIImageView alloc] init];
-        self.midV = midV;
-        [self addSubview:midV];
-        
-        UIImageView *rightV = [[UIImageView alloc] init];
-        self.rightV = rightV;
-        [self addSubview:rightV];
     }
     return self;
 }
 
+/**
+ 点击图片
+ */
 -(void)tapImage:(UIGestureRecognizer *)tap{
     if (self.tapImageBlcok) {
         self.tapImageBlcok();
     }
 }
 
+//设置banner的类型: 轮播 和 相册浏览
+- (void)setBannerType:(TLBannerType)bannerType{
+    _bannerType = bannerType;
+    switch (bannerType) {
+        case TLBannerTypeCarousel:
+            self.leftV.contentMode = UIViewContentModeScaleAspectFill;
+            self.leftV.clipsToBounds = YES;
+            
+            self.midV.contentMode = UIViewContentModeScaleAspectFill;
+            self.midV.clipsToBounds = YES;
+            
+            self.rightV.contentMode = UIViewContentModeScaleAspectFill;
+            self.rightV.clipsToBounds = YES;
+            
+            self.backgroundColor = [UIColor whiteColor];
+            break;
+            
+        case TLBannerTypeBrowser:
+            self.leftV.contentMode = UIViewContentModeScaleAspectFit;
+            self.midV.contentMode = UIViewContentModeScaleAspectFit;
+            self.rightV.contentMode = UIViewContentModeScaleAspectFit;
+            self.backgroundColor = [UIColor blackColor];
+            break;
+            
+        default:
+            break;
+    }
+}
 
 -(void)layoutSubviews{
     [super layoutSubviews];
@@ -538,5 +584,4 @@ static CGFloat FixedViewCount = 3;
         }];
     }
 }
-
 @end

@@ -9,13 +9,24 @@
 #import <UIKit/UIKit.h>
 #import "Masonry.h"
 
+typedef enum : NSUInteger {
+    TLBannerTypeCarousel,//轮播
+    TLBannerTypeBrowser,//相册浏览
+} TLBannerType;
+
+
+#pragma mark - TLScrollView
+@class TLImageView;
 @interface TLScrollView : UIScrollView
 @property (nonatomic , weak) UIImageView *leftV;
 @property (nonatomic , weak) UIImageView *midV;
 @property (nonatomic , weak) UIImageView *rightV;
+@property (nonatomic , assign) TLBannerType bannerType;
 @property (nonatomic , copy) void (^tapImageBlcok)();
+@property (nonatomic , copy) void (^clickedCoverBtn)();
 @end
 
+#pragma mark - TLBannerViewDelegate
 @class TLBannerView;
 @protocol TLBannerViewDelegate <NSObject>
 @optional
@@ -26,11 +37,15 @@
 -(void)bannerView:(TLBannerView *)bannerView indexFromClickedPicture:(NSInteger)index;
 @end
 
-@interface TLBannerView : UIView
 
-/** 轮播的时间间隔 */
+#pragma mark - TLBannerView
+@interface TLBannerView : UIView
+/**
+ 轮播的时间间隔
+ */
 @property (nonatomic , assign) NSTimeInterval scrollDuration;
 @property (nonatomic , strong) NSArray *images;
+@property (nonatomic , assign) TLBannerType bannerType;
 @property (nonatomic , weak) id<TLBannerViewDelegate> delegate;
 @property (nonatomic , copy) void (^selectedBlock)(TLBannerView *bannerV,NSInteger index);
 
@@ -39,6 +54,7 @@
  @param images 图片数据源
  */
 -(instancetype)initWithImages:(NSArray *)images scrollDuration:(NSTimeInterval)duration;
++ (instancetype)showInView:(UIView *)inView images:(NSArray *)images scrollDuration:(NSTimeInterval)duration animate:(BOOL)animate;
 
 /** 开启定时器 */
 -(void)startTimer;
@@ -46,4 +62,5 @@
 -(void)pauseTimer;
 /** 销毁定时器 */
 -(void)destroyTimer;
+
 @end

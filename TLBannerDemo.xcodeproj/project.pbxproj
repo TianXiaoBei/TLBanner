@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CCC9B3C61BC5CBEC4207E77 /* libPods-TLBannerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 148B78F55CF3A49B6E11F4CE /* libPods-TLBannerDemoTests.a */; };
 		4B90A81E1F03B9FB009E1D62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A81D1F03B9FB009E1D62 /* main.m */; };
 		4B90A8211F03B9FB009E1D62 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A8201F03B9FB009E1D62 /* AppDelegate.m */; };
 		4B90A8241F03B9FB009E1D62 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A8231F03B9FB009E1D62 /* ViewController.m */; };
@@ -33,6 +34,8 @@
 		4B90A8821F03BA53009E1D62 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A8731F03BA53009E1D62 /* View+MASAdditions.m */; };
 		4B90A8831F03BA53009E1D62 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A8761F03BA53009E1D62 /* ViewController+MASAdditions.m */; };
 		4B90A8841F03BA53009E1D62 /* TLBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B90A8781F03BA53009E1D62 /* TLBannerView.m */; };
+		5D949388C1B7D47FB60BAA55 /* libPods-TLBannerDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D155E0D37F5AACE2900E0F /* libPods-TLBannerDemoUITests.a */; };
+		DC7E22F8ABFE855111315B6C /* libPods-TLBannerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FEE0A0F5896E3320FE7FFC /* libPods-TLBannerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		148B78F55CF3A49B6E11F4CE /* libPods-TLBannerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLBannerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		21FCB861FD6F9054963A9D2D /* Pods-TLBannerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemo/Pods-TLBannerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2CD9D3693C8AB404773E9024 /* Pods-TLBannerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemoTests/Pods-TLBannerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		403C157DC17D46CA8AA24BEC /* Pods-TLBannerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemoUITests/Pods-TLBannerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B90A8191F03B9FB009E1D62 /* TLBannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TLBannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B90A81D1F03B9FB009E1D62 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B90A81F1F03B9FB009E1D62 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +110,11 @@
 		4B90A8761F03BA53009E1D62 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		4B90A8771F03BA53009E1D62 /* TLBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLBannerView.h; sourceTree = "<group>"; };
 		4B90A8781F03BA53009E1D62 /* TLBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLBannerView.m; sourceTree = "<group>"; };
+		4D6EE874F2CE1FEC5B19A8DA /* Pods-TLBannerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemoUITests/Pods-TLBannerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A2D38679FDA7DA4C26D50410 /* Pods-TLBannerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemo/Pods-TLBannerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A4FEE0A0F5896E3320FE7FFC /* libPods-TLBannerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLBannerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D155E0D37F5AACE2900E0F /* libPods-TLBannerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TLBannerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC5FA7A9561EB51226C0A0E /* Pods-TLBannerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLBannerDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TLBannerDemoTests/Pods-TLBannerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC7E22F8ABFE855111315B6C /* libPods-TLBannerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CCC9B3C61BC5CBEC4207E77 /* libPods-TLBannerDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D949388C1B7D47FB60BAA55 /* libPods-TLBannerDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +159,8 @@
 				4B90A8351F03B9FB009E1D62 /* TLBannerDemoTests */,
 				4B90A8401F03B9FB009E1D62 /* TLBannerDemoUITests */,
 				4B90A81A1F03B9FB009E1D62 /* Products */,
+				E9E1DAE86A02D34E824D0F25 /* Pods */,
+				C80E98D05E99C456A5794F20 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,6 +259,29 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		C80E98D05E99C456A5794F20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4FEE0A0F5896E3320FE7FFC /* libPods-TLBannerDemo.a */,
+				148B78F55CF3A49B6E11F4CE /* libPods-TLBannerDemoTests.a */,
+				A5D155E0D37F5AACE2900E0F /* libPods-TLBannerDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9E1DAE86A02D34E824D0F25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				21FCB861FD6F9054963A9D2D /* Pods-TLBannerDemo.debug.xcconfig */,
+				A2D38679FDA7DA4C26D50410 /* Pods-TLBannerDemo.release.xcconfig */,
+				BEC5FA7A9561EB51226C0A0E /* Pods-TLBannerDemoTests.debug.xcconfig */,
+				2CD9D3693C8AB404773E9024 /* Pods-TLBannerDemoTests.release.xcconfig */,
+				403C157DC17D46CA8AA24BEC /* Pods-TLBannerDemoUITests.debug.xcconfig */,
+				4D6EE874F2CE1FEC5B19A8DA /* Pods-TLBannerDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B90A8461F03B9FB009E1D62 /* Build configuration list for PBXNativeTarget "TLBannerDemo" */;
 			buildPhases = (
+				5745BCE07A8A970FCC42B334 /* [CP] Check Pods Manifest.lock */,
 				4B90A8151F03B9FB009E1D62 /* Sources */,
 				4B90A8161F03B9FB009E1D62 /* Frameworks */,
 				4B90A8171F03B9FB009E1D62 /* Resources */,
+				71B19997B7B77F7C458912EB /* [CP] Embed Pods Frameworks */,
+				05986FC035BCD3414B2F1513 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B90A8491F03B9FB009E1D62 /* Build configuration list for PBXNativeTarget "TLBannerDemoTests" */;
 			buildPhases = (
+				CB78F8A527F5AFEF7EE19B87 /* [CP] Check Pods Manifest.lock */,
 				4B90A82E1F03B9FB009E1D62 /* Sources */,
 				4B90A82F1F03B9FB009E1D62 /* Frameworks */,
 				4B90A8301F03B9FB009E1D62 /* Resources */,
+				D1A814AD82CFA09C639C2278 /* [CP] Embed Pods Frameworks */,
+				4575FC8B5260271564377335 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -284,9 +330,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B90A84C1F03B9FB009E1D62 /* Build configuration list for PBXNativeTarget "TLBannerDemoUITests" */;
 			buildPhases = (
+				3DFEF33E40F5745E46EB6382 /* [CP] Check Pods Manifest.lock */,
 				4B90A8391F03B9FB009E1D62 /* Sources */,
 				4B90A83A1F03B9FB009E1D62 /* Frameworks */,
 				4B90A83B1F03B9FB009E1D62 /* Resources */,
+				7504BEAD9B5783C4A07CD447 /* [CP] Embed Pods Frameworks */,
+				6680AB8404C58CD30411ACBF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,6 +428,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05986FC035BCD3414B2F1513 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemo/Pods-TLBannerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DFEF33E40F5745E46EB6382 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TLBannerDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4575FC8B5260271564377335 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemoTests/Pods-TLBannerDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5745BCE07A8A970FCC42B334 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TLBannerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6680AB8404C58CD30411ACBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemoUITests/Pods-TLBannerDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71B19997B7B77F7C458912EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemo/Pods-TLBannerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7504BEAD9B5783C4A07CD447 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemoUITests/Pods-TLBannerDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB78F8A527F5AFEF7EE19B87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TLBannerDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A814AD82CFA09C639C2278 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TLBannerDemoTests/Pods-TLBannerDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B90A8151F03B9FB009E1D62 /* Sources */ = {
@@ -545,6 +741,7 @@
 		};
 		4B90A8471F03B9FB009E1D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21FCB861FD6F9054963A9D2D /* Pods-TLBannerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
@@ -557,6 +754,7 @@
 		};
 		4B90A8481F03B9FB009E1D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2D38679FDA7DA4C26D50410 /* Pods-TLBannerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
@@ -569,6 +767,7 @@
 		};
 		4B90A84A1F03B9FB009E1D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC5FA7A9561EB51226C0A0E /* Pods-TLBannerDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
@@ -582,6 +781,7 @@
 		};
 		4B90A84B1F03B9FB009E1D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CD9D3693C8AB404773E9024 /* Pods-TLBannerDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
@@ -595,6 +795,7 @@
 		};
 		4B90A84D1F03B9FB009E1D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 403C157DC17D46CA8AA24BEC /* Pods-TLBannerDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
 				INFOPLIST_FILE = TLBannerDemoUITests/Info.plist;
@@ -607,6 +808,7 @@
 		};
 		4B90A84E1F03B9FB009E1D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6EE874F2CE1FEC5B19A8DA /* Pods-TLBannerDemoUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 7SY57U9SGN;
 				INFOPLIST_FILE = TLBannerDemoUITests/Info.plist;
