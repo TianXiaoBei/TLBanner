@@ -154,7 +154,8 @@
 				4B90A8521F03BA4C009E1D62 /* 4.jpg */,
 				4B90A8531F03BA4C009E1D62 /* 5.jpg */,
 				4B90A8541F03BA4C009E1D62 /* 6.jpg */,
-				4B90A85B1F03BA53009E1D62 /* TLBannerV */,
+				4B90A85C1F03BA53009E1D62 /* Masonry */,
+				4B90A85B1F03BA53009E1D62 /* TLBanner */,
 				4B90A81B1F03B9FB009E1D62 /* TLBannerDemo */,
 				4B90A8351F03B9FB009E1D62 /* TLBannerDemoTests */,
 				4B90A8401F03B9FB009E1D62 /* TLBannerDemoUITests */,
@@ -216,14 +217,13 @@
 			path = TLBannerDemoUITests;
 			sourceTree = "<group>";
 		};
-		4B90A85B1F03BA53009E1D62 /* TLBannerV */ = {
+		4B90A85B1F03BA53009E1D62 /* TLBanner */ = {
 			isa = PBXGroup;
 			children = (
-				4B90A85C1F03BA53009E1D62 /* Masonry */,
 				4B90A8771F03BA53009E1D62 /* TLBannerView.h */,
 				4B90A8781F03BA53009E1D62 /* TLBannerView.m */,
 			);
-			path = TLBannerV;
+			path = TLBanner;
 			sourceTree = "<group>";
 		};
 		4B90A85C1F03BA53009E1D62 /* Masonry */ = {
