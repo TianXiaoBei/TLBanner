@@ -22,8 +22,8 @@ typedef enum : NSUInteger {
 @property (nonatomic , weak) UIImageView *midV;
 @property (nonatomic , weak) UIImageView *rightV;
 @property (nonatomic , assign) TLBannerType bannerType;
-@property (nonatomic , copy) void (^tapImageBlcok)();
-@property (nonatomic , copy) void (^clickedCoverBtn)();
+@property (nonatomic , copy) void (^tapImageBlcok)(void);
+@property (nonatomic , copy) void (^clickedCoverBtn)(void);
 @end
 
 #pragma mark - TLBannerViewDelegate
@@ -54,7 +54,6 @@ typedef enum : NSUInteger {
  @param images 图片数据源
  */
 -(instancetype)initWithImages:(NSArray *)images scrollDuration:(NSTimeInterval)duration;
-+ (instancetype)showInView:(UIView *)inView images:(NSArray *)images scrollDuration:(NSTimeInterval)duration animate:(BOOL)animate;
 
 /** 开启定时器 */
 -(void)startTimer;
